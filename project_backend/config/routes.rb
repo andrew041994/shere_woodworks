@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'welcom/home'
+  get 'welcom/app'
   devise_for :admins
   devise_for :users
   #root to: "home#index"
