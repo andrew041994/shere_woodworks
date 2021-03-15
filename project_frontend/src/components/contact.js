@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-export default class Login extends Component {
+export default class Contact extends Component {
     constructor() {
         super();
         this.state = {

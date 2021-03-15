@@ -12,12 +12,10 @@ export default class Home extends Component {
           <h3>Mission Statement</h3>
 
           <p>some stuff about yourself/company </p>
-          <Link to="/login">
-          <button>Login</button>           
+          <Link to="/contact">
+          <button>Contact Us!</button>           
           </Link>
-          <Link to='/signup'>
-          <button>Signup</button>
-          </Link>
+          
 
 
 

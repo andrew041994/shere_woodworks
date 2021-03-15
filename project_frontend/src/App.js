@@ -1,8 +1,7 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom"
 import './App.css';
-import Login from "./components/login";
-import Signup from "./components/signup";
+import Contact from "./components/contact";
 import Home from './containers/Home';
 
 function App() {
@@ -26,8 +25,8 @@ function App() {
    
       <Switch>
         <Route component={Home} exact path="/" />
-        <Route component={Login} exact path="/login" />
-        <Route component={Signup} exact path='/signup'/>
+        <Route component={Contact} exact path="/contact" />
+    
         <Route component={NotFound} exact path="*" />
 
       </Switch>
