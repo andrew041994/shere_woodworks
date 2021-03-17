@@ -35,7 +35,8 @@ sendEmail(e) {
 
   render() {
   return (
-    <div style={{ margin: "auto", width: "20%", padding: "30px" }}>
+    <div style={{ margin: "auto", width: "50%", padding: "30px" }}>
+      <h2 className="contact">Tell Us How We Can Bring Your Idea To Life! </h2>
       <form className="contact-form" onSubmit={this.sendEmail}>
         <input required="required" type="text" name="name" placeholder="Name" value={this.state.name} onChange={(event) => this.setState({name: event.target.value})}/> <br/><br/>
         <input required="required" type="text" name="subject" placeholder="Subject" value={this.state.subject} onChange={(event) => this.setState({subject: event.target.value})}/><br/><br/>
