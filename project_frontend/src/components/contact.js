@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import emailjs from 'emailjs-com'
 import Button from 'react-bootstrap/Button'
-import ButtonGroup from 'react-bootstrap/ButtonGroup'
-
 
 export default class Contact extends Component {
   constructor() {
@@ -38,18 +36,13 @@ sendEmail(e) {
   render() {
   return (
     <div style={{ margin: "auto", width: "20%", padding: "30px" }}>
-
       <form className="contact-form" onSubmit={this.sendEmail}>
         <input required="required" type="text" name="name" placeholder="Name" value={this.state.name} onChange={(event) => this.setState({name: event.target.value})}/> <br/><br/>
         <input required="required" type="text" name="subject" placeholder="Subject" value={this.state.subject} onChange={(event) => this.setState({subject: event.target.value})}/><br/><br/>
         <input required="required" type="email" name="email" placeholder="Email" value={this.state.email} onChange={(event) => this.setState({email: event.target.value})} /><br/><br/>
         <textarea required="required" type="textarea" name="message" placeholder="Message" value={this.state.message} onChange={(event) => this.setState({message: event.target.value})} /><br/><br/>
-        {/* <ButtonGroup variant="outline-dark"> */}
-
         <Button className="mr-2" type="submit" variant="info" > Submit </Button>           
         <Button className="mr-2" variant="info"  href="/">Home</Button> 
-    
-        {/* </ButtonGroup> */}
       </form> 
     </div>
   );
