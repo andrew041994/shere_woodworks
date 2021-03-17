@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import emailjs from 'emailjs-com'
-import { Link } from 'react-router-dom'
 import Button from 'react-bootstrap/Button'
+import ButtonGroup from 'react-bootstrap/ButtonGroup'
 
 
 export default class Contact extends Component {
@@ -44,9 +44,12 @@ sendEmail(e) {
         <input required="required" type="text" name="subject" placeholder="Subject" value={this.state.subject} onChange={(event) => this.setState({subject: event.target.value})}/><br/><br/>
         <input required="required" type="email" name="email" placeholder="Email" value={this.state.email} onChange={(event) => this.setState({email: event.target.value})} /><br/><br/>
         <textarea required="required" type="textarea" name="message" placeholder="Message" value={this.state.message} onChange={(event) => this.setState({message: event.target.value})} /><br/><br/>
-        <Button variant="success"> Submit </Button>
-        <Link to="/"><Button variant="warning"  >Home</Button> 
-      </Link>
+        {/* <ButtonGroup variant="outline-dark"> */}
+
+        <Button className="mr-2" type="submit" variant="info" > Submit </Button>           
+        <Button className="mr-2" variant="info"  href="/">Home</Button> 
+    
+        {/* </ButtonGroup> */}
       </form> 
     </div>
   );
