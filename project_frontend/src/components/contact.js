@@ -38,8 +38,16 @@ sendEmail(e) {
   render() {
   return (
     <div>
-      <Form className="contact-form" onSubmit={this.sendEmail}>
+      
+      
         <Container fluid>
+          <Row className="justify-content-md-center">
+            <Col lg="auto">
+             <h2 className="contact">Tell Us How We Can Bring Your Idea To Life! </h2>
+            </Col>            
+          </Row>
+       
+        <Form className="contact-form" onSubmit={this.sendEmail}>
           <Row className="justify-content-md-center">
             <Col lg="auto">
               <Form.Group>
@@ -84,13 +92,14 @@ sendEmail(e) {
               <Button className="mr-2" variant="info"  href="/">Home</Button> 
             </Col>
           </Row>
+          </Form>
         </Container>
        
         
 
         
-      </Form>
-      {/* <h2 className="contact">Tell Us How We Can Bring Your Idea To Life! </h2>
+     
+      {/* 
       <form  >
         <input  type="text" name="name" placeholder="Name" /> <br/><br/>
         <input required="required" type="text" name="subject" placeholder="Subject" /><br/><br/>
