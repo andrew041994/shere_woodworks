@@ -1,13 +1,13 @@
 body {
     /* background: url(background2.jpeg); */
     
-    background-image: url(background2.jpeg) ;
-    /* -webkit-background-size: cover; */
+    background-image: url(background2.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
+    padding-top: 2%;
+   
 }
 
 .header,.mission,.statement,.contact{
-    color: aliceblue;
+    color:bisque
 }

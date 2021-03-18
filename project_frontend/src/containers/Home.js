@@ -18,7 +18,7 @@ export default class Home extends Component {
          </Row>
          <Row className="justify-content-md-center">
           <Col  md="auto"><p className="statement">some stuff about yourself/company </p></Col>
-         </Row><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+         </Row>
          <Row className="justify-content-md-center">
           <Col  md="auto"> 
           <Link to="/contact">
