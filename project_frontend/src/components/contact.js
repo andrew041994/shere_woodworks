@@ -38,7 +38,7 @@ sendEmail(e) {
   render() {
   return (
     <div>
-      <Form>
+      <Form className="contact-form" onSubmit={this.sendEmail}>
         <Container fluid>
           <Row className="justify-content-md-center">
             <Col lg="auto">
@@ -63,17 +63,17 @@ sendEmail(e) {
               <Form.Group controlId="email">
                 <Form.Label>Email Address</Form.Label>
                   <Form.Control type="email" placeholder="Enter email"/>
-                  <Form.Text className="text-muted">We'll never share any of your information</Form.Text>
+                  <Form.Text className="text">We'll never share any of your information</Form.Text>
                 
               </Form.Group>
             </Col>
           </Row>
 
           <Row className="justify-content-lg-center">
-            <Col lg="4">
+            <Col lg="3">
               <Form.Group controlId="message">
                 <Form.Label>Message</Form.Label>
-                <Form.Control as="textarea" rows={4}  placeholder="Add your message here"/>
+                <Form.Control as="textarea" rows={3}  placeholder="Add your message here"/>
               </Form.Group>
             </Col>
           </Row>
@@ -91,7 +91,7 @@ sendEmail(e) {
         
       </Form>
       <h2 className="contact">Tell Us How We Can Bring Your Idea To Life! </h2>
-      <form className="contact-form" onSubmit={this.sendEmail}>
+      <form  >
         <input required="required" type="text" name="name" placeholder="Name" value={this.state.name} onChange={(event) => this.setState({name: event.target.value})}/> <br/><br/>
         <input required="required" type="text" name="subject" placeholder="Subject" value={this.state.subject} onChange={(event) => this.setState({subject: event.target.value})}/><br/><br/>
         <input required="required" type="email" name="email" placeholder="Email" value={this.state.email} onChange={(event) => this.setState({email: event.target.value})} /><br/><br/>

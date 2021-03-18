@@ -8,6 +8,7 @@ body {
    
 }
 
-.header,.mission,.statement,.contact{
-    color:bisque
-}
+.contact-form{
+    color:bisque;
+    font-weight:bolder;
+   }
