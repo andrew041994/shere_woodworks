@@ -5,7 +5,7 @@ export default class Instagram extends Component {
   render() {
     return (
       <div>
-          <Feed userName="sherewoodworks" className="Feed" classNAmeLoading="Loading" limit="8"/>
+          <Feed userName="sherewoodworks" className="Feed" classNameLoading="Loading" limit="10"/>
       </div>
     );
   }
