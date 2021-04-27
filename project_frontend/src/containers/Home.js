@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import  { Link } from 'react-router-dom'
 
 import Instagram from '../components/instagram';
+import Navbar from '../components/Navbar';
 
 export default class Home extends Component {
 
@@ -11,6 +12,7 @@ export default class Home extends Component {
 
     return (
       <div >
+        <Navbar/>
 
         
        
