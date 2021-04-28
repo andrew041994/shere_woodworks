@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
-import emailjs from 'emailjs-com'
+import emailjs from 'emailjs-com';
+import Box from '@material-ui/core/Box';
+import TextField from '@material-ui/core/TextField';
+import { makeStyles } from '@material-ui/styles'
 
 
 export default class Contact extends Component {
@@ -33,9 +36,27 @@ sendEmail(e) {
       })
   }
 
+  useStyles = makeStyles((theme) => ({
+    box:  {
+      backgroundColor: "#FFF",
+      "&:hover": {
+          //you want this to be the same as the backgroundColor above
+          backgroundColor: "#FFF"
+    }}
+  }))
+
   render() {
+
   return (
-    <div>
+    <div >
+      <Box 
+        component="form"
+        className={this.useStyles.box}
+        >
+          <TextField className={this.useStyles.box} id="filled-basic" label="Filled" variant="filled" />
+          <TextField id="filled-basic" label="Filled" variant="filled" />
+          <TextField id="filled-basic" label="Filled" variant="filled" />
+      </Box>
       
     </div>
   );

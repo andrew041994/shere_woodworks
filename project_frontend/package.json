@@ -17,6 +17,7 @@
     "react-color": "^2.19.3",
     "react-dom": "^17.0.1",
     "react-instagram-authless-feed": "github:jamesmoriarty/react-instagram-authless-feed#v2.0.0",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.1",
     "user-instagram": "^2.1.9",
     "web-vitals": "^0.2.4"

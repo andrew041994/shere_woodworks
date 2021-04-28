@@ -8,6 +8,9 @@ import { Avatar} from '@material-ui/core';
 import 'fontsource-roboto';
 import img from '../images/background1.jpeg';
 import InstagramIcon from '@material-ui/icons/Instagram';
+import  { Link } from 'react-router-dom'
+import Button from '@material-ui/core/Button'
+import Contact from './contact';
 
 const useStyles = makeStyles({
     title: {
@@ -32,7 +35,15 @@ const useStyles = makeStyles({
 
       color: {
         color:"inherit"
-      }
+      },
+
+      button: {
+        backgroundColor: "inherit",
+        "&:hover": {
+            //you want this to be the same as the backgroundColor above
+            backgroundColor: "#FFF"
+      }}
+
 
 
 })
@@ -54,10 +65,14 @@ const Navbar = () => {
                     <IconButton className={classes.title}>
                         <Typography  onClick={() => window.location.reload(true)} variant="h4"   >Shere Woodworks</Typography>
                     </IconButton>
+                    
 
                     <IconButton className={classes.color} >
                         <InstagramIcon onClick={() => window.open("https://www.instagram.com/sherewoodworks/")} className={classes.insta} />
                     </IconButton>
+                    <Button variant="outlined" className={classes.button}  color="inherit" component={Link} to="/contact">
+         Contact Us!                            
+        </Button>
 
                 </Toolbar>
             </AppBar>
