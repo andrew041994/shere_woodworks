@@ -2,10 +2,21 @@ import React, { Component } from 'react';
 import emailjs from 'emailjs-com';
 import Box from '@material-ui/core/Box';
 import TextField from '@material-ui/core/TextField';
-import { makeStyles } from '@material-ui/styles'
+import TextareaAutosize from '@material-ui/core/TextareaAutosize';
+import { withStyles } from '@material-ui/styles'
 
+const styles = theme => ({
+  root: {
+    '& > *': {
+      // flexGrow: 1, 
+      margin:2,
+      width: '25ch',
+      align: 'center',
+    },
+  },
+});
 
-export default class Contact extends Component {
+class Contact extends Component {
   constructor() {
     super();
 
@@ -36,29 +47,29 @@ sendEmail(e) {
       })
   }
 
-  useStyles = makeStyles((theme) => ({
-    box:  {
-      backgroundColor: "#FFF",
-      "&:hover": {
-          //you want this to be the same as the backgroundColor above
-          backgroundColor: "#FFF"
-    }}
-  }))
+
+
 
   render() {
-
+  const {classes} = this.props;
   return (
     <div >
-      <Box 
-        component="form"
-        className={this.useStyles.box}
-        >
-          <TextField className={this.useStyles.box} id="filled-basic" label="Filled" variant="filled" />
-          <TextField id="filled-basic" label="Filled" variant="filled" />
-          <TextField id="filled-basic" label="Filled" variant="filled" />
+      <Box  display="flex"
+  justifyContent="center"
+  alignItems="center">
+    <form className={classes.root} >
+      <TextField  id="filled-basic" label="Filled" variant="filled"  InputProps={{style: {background: '#f8f9fa'}}}/>
+      <TextField id="filled-basic" label="Filled" variant="filled"  InputProps={{style: {background: '#f8f9fa'}}}/>
+      <TextField id="filled-basic" label="Filled" variant="filled"  InputProps={{style: {background: '#f8f9fa'}}}/><br/>
+      <TextareaAutosize aria-label="empty textarea" placeholder="Empty" rowsMin={6} style={{ width: "100%", alignSelf: 'center'}}/>
+      
+    </form>
+
       </Box>
+     
       
     </div>
   );
 }
 }
+export default withStyles(styles)(Contact)
