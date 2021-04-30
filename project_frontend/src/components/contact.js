@@ -4,9 +4,12 @@ import Box from '@material-ui/core/Box';
 import TextField from '@material-ui/core/TextField';
 import TextareaAutosize from '@material-ui/core/TextareaAutosize';
 import { withStyles } from '@material-ui/styles'
+import { Link } from 'react-router-dom';
 // import { ValidatorForm, TextValidator} from 'react-material-ui-form-validator';
 import SendIcon from '@material-ui/icons/Send';
+import HomeIcon from '@material-ui/icons/Home';
 import Button from '@material-ui/core/Button';
+import Grid from '@material-ui/core/Grid';
 
  
 const styles = theme => ({
@@ -18,6 +21,12 @@ const styles = theme => ({
       align: 'center',
       background: 'transparent'
     },
+    home: {
+     
+     
+      background: 'transparent',
+
+    }
   },
 });
 
@@ -59,7 +68,8 @@ sendEmail(e) {
   const {classes} = this.props;
   return (
     <div >
-
+       
+         
         <Box  display="flex" justifyContent="center" alignItems="center" className={classes.root}>
           <form  onSubmit={this.sendEmail}>
             <span >
@@ -80,8 +90,8 @@ sendEmail(e) {
               <TextareaAutosize required={true} aria-label="Message" placeholder="Message" rowsMin={6} style={{ width: "100%",background: '#ffff' }}
               
               /> 
-
-              <Button
+<Grid container spacing={.5} justify='space-between'>
+<Button
                 type="submit"
                 variant="contained"
                 color="primary"
@@ -90,6 +100,22 @@ sendEmail(e) {
               >
                 Send
               </Button>   
+
+              <Button
+          
+                component={Link} to="/"
+               
+                variant="contained"
+                color="primary"
+               justifyContent="center" alignItems="center"
+                
+                endIcon={<HomeIcon/>}
+              >
+                
+              </Button>
+
+</Grid>
+               
             
           </form>
         </Box>
