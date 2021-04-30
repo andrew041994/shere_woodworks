@@ -60,17 +60,17 @@ const Navbar = () => {
             <AppBar position="static">
                 <Toolbar>
                     
-                    <IconButton  >
-                        <Avatar onClick={() => window.location.reload(true)} className={classes.logoStyle} alt="SW" src={img} />
+                    <IconButton  onClick={() => window.location.reload(true)} y>
+                        <Avatar  className={classes.logoStyle} alt="SW" src={img} />
                     </IconButton>
 
-                    <IconButton className={classes.title}>
-                        <Typography  onClick={() => window.location.reload(true)} variant="h4"   >Shere Woodworks</Typography>
+                    <IconButton className={classes.title} onClick={() => window.location.reload(true)} >
+                        <Typography   variant="h4"   >Shere Woodworks</Typography>
                     </IconButton>
                     
 
-                    <IconButton className={classes.color} >
-                        <InstagramIcon onClick={() => window.open("https://www.instagram.com/sherewoodworks/")} className={classes.insta} />
+                    <IconButton className={classes.color} onClick={() => window.open("https://www.instagram.com/sherewoodworks/")} >
+                        <InstagramIcon  className={classes.insta} />
                     </IconButton>
                     <Button variant="contained" className={classes.button} color="primary" component={Link} to="/contact">
          Contact Us!                            

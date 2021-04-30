@@ -13,6 +13,7 @@ export default class Home extends Component {
     return (
       <div >
         <Navbar/>
+        <Instagram account="sherewoodworks" numberOfMediaElements={1} discardVideos={true} />
 
         
        
