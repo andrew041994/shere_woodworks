@@ -4,7 +4,7 @@ import Box from '@material-ui/core/Box';
 import TextField from '@material-ui/core/TextField';
 import TextareaAutosize from '@material-ui/core/TextareaAutosize';
 import { withStyles } from '@material-ui/styles'
-import { ValidatorForm, TextValidator} from 'react-material-ui-form-validator';
+// import { ValidatorForm, TextValidator} from 'react-material-ui-form-validator';
 import SendIcon from '@material-ui/icons/Send';
 import Button from '@material-ui/core/Button';
 
@@ -14,7 +14,7 @@ const styles = theme => ({
     '& > *': {
       // flexGrow: 1, 
       margin:2,
-      width: '55ch',
+      width: '30%',
       align: 'center',
       background: 'transparent'
     },
@@ -60,25 +60,27 @@ sendEmail(e) {
   return (
     <div >
 
-        <Box  display="flex" justifyContent="center" alignItems="center">
-          <form className={classes.root} onSubmit={this.sendEmail}>
+        <Box  display="flex" justifyContent="center" alignItems="center" className={classes.root}>
+          <form  onSubmit={this.sendEmail}>
             <span >
             <h3 style={{color:'#f8f9fa', fontWeight: 'bold'} }>Tell us about your idea!</h3>
             </span>
         
-            <ValidatorForm ref="form">
-              <TextField  id="filled-basic" onChange={(event) => {this.setState({name: event.target.value})}} label="Full Name" variant="filled"  InputProps={{style: {background: '#b5b8ba'}}} style={{ width: "100%"}}/> <br/><br/>
-
-              <TextField id="filled-basic" onChange={(event) => {this.setState({subject: event.target.value})}} label="Subject" variant="filled"  InputProps={{style: {background: '#b5b8ba'}}} style={{ width: "100%"}}/><br/><br/>
             
-              <TextValidator label="Email" 
-              onChange={(event) => {this.setState({email: event.target.value})}}
-                validators={['required', 'isEmail']}
-                errorMessages={['this field is required', 'email is not valid']}
-                style={{ width: "100%", background: '#b5b8ba'}} 
-                /><br/>
+              <TextField required={true} id="filled-basic" onChange={(event) => {this.setState({name: event.target.value})}} 
+              label="Full Name" variant="filled"  InputProps={{style: {background: '#ffff'}}} style={{ width: "100%"}}/> <br/><br/>
 
-              <TextareaAutosize aria-label="empty textarea" placeholder="Empty" rowsMin={6} style={{ width: "100%",background: '#b5b8ba' }}/> 
+              <TextField required={true} id="filled-basic" onChange={(event) => {this.setState({subject: event.target.value})}} 
+              label="Subject" variant="filled"  InputProps={{style: {background: '#ffff'}}} style={{ width: "100%"}}/><br/><br/>
+
+              <TextField type="email" required={true} id="filled-basic" onChange={(event) => {this.setState({subject: event.target.value})}} 
+              label="Email" variant="filled"  InputProps={{style: {background: '#ffff'}}} style={{ width: "100%"}}/><br/><br/>
+
+
+              <TextareaAutosize required={true} aria-label="Message" placeholder="Message" rowsMin={6} style={{ width: "100%",background: '#ffff' }}
+              
+              /> 
+
               <Button
                 type="submit"
                 variant="contained"
@@ -88,7 +90,7 @@ sendEmail(e) {
               >
                 Send
               </Button>   
-            </ValidatorForm>
+            
           </form>
         </Box>
      
@@ -99,3 +101,12 @@ sendEmail(e) {
 }
 export default withStyles(styles)(Contact)
 
+// <ValidatorForm ref="form">
+{/* <TextValidator label="Email"
+              
+onChange={(event) => {this.setState({email: event.target.value})}}
+  validators={['required', 'isEmail']}
+  errorMessages={['this field is required', 'email is not valid']}
+  style={{ width: "100%", background: '#b5b8ba'}} 
+  /><br/>
+  </ValidatorForm> */}
