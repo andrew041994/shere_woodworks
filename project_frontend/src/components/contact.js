@@ -20,15 +20,17 @@ const styles = theme => ({
       width: '30%',
       align: 'center',
       background: 'transparent'
-    },
+    }},
     home: {
-     
-     
-      background: 'transparent',
-
+      backgroundColor: "primary",
+      "&:hover": {
+        //you want this to be the same as the backgroundColor above
+        backgroundColor: "primary",
+        color: "#ffff"
+        
     }
   },
-});
+        });
 
 class Contact extends Component {
   constructor() {
@@ -90,7 +92,7 @@ sendEmail(e) {
               <TextareaAutosize required={true} aria-label="Message" placeholder="Message" rowsMin={6} style={{ width: "100%",background: '#ffff' }}
               
               /> 
-<Grid container spacing={.5} justify='space-between'>
+<Grid container spacing={.5} justify='space-between' color="#ffff">
 <Button
                 type="submit"
                 variant="contained"
@@ -100,19 +102,20 @@ sendEmail(e) {
               >
                 Send
               </Button>   
-
               <Button
-          
+              className={classes.home}
                 component={Link} to="/"
-               
-                variant="contained"
+            
                 color="primary"
-               justifyContent="center" alignItems="center"
-                
-                endIcon={<HomeIcon/>}
+                variant="contained"
+              
+                style={{width: '30%'}}
+                endIcon={<SendIcon/>}
               >
-                
-              </Button>
+                Home
+              </Button>   
+
+             
 
 </Grid>
                

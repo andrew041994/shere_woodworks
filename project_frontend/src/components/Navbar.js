@@ -38,11 +38,13 @@ const useStyles = makeStyles({
       },
 
       button: {
-        backgroundColor: "inherit",
-        "&:hover": {
-            //you want this to be the same as the backgroundColor above
-            backgroundColor: "#FFF"
-      }}
+        backgroundColor: "primary",
+      "&:hover": {
+        //you want this to be the same as the backgroundColor above
+        backgroundColor: "primary",
+        color: "#ffff"
+        
+    }}
 
 
 
@@ -70,7 +72,7 @@ const Navbar = () => {
                     <IconButton className={classes.color} >
                         <InstagramIcon onClick={() => window.open("https://www.instagram.com/sherewoodworks/")} className={classes.insta} />
                     </IconButton>
-                    <Button variant="outlined" className={classes.button}  color="inherit" component={Link} to="/contact">
+                    <Button variant="contained" className={classes.button} color="primary" component={Link} to="/contact">
          Contact Us!                            
         </Button>
 
